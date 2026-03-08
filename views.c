@@ -8,11 +8,28 @@ typedef struct building {
 
 void addToSet(BuildingSet **b, int v) {}
 
-void removeFromSet(BuildingSet **b) {}
+void removeFromSet(BuildingSet **b) {
+  BuildingSet *curr = *b;
+  for (int i = 0; *b != NULL; i++) {
+    //if curr->neighbor != 
+    //curr = curr->neighbor;
 
-int isSetEmpty(BuildingSet *b) {}
+    // my approach would be to use the ending point and then when the neightbor == **b, point curr neightbor to b's neighbor
+    
+  }
+}
 
-int topOfTheSet(BuildingSet *b) {}
+int isSetEmpty(BuildingSet *b) {
+  if (b == NULL) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+int topOfTheSet(BuildingSet *b) {
+  return b->index;
+}
 
 void printSet(BuildingSet *b) {
   if (isSetEmpty(b)) {
